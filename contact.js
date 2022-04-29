@@ -1,4 +1,5 @@
 function contacts(queries) {
+    // https://www.hackerrank.com/challenges/contacts/problem
     // Write your code here
     let directory = {};
     let responses = [];
