@@ -17,30 +17,23 @@
             - allocations
 
 ## II. Big O Summary
-1. **O(1)**
-    - Constant
+1. **O(1)** - Constant
     - no loops
-2. **O(log N)**
-    - Logarithmic
+2. **O(log N)** - Logarithmic
     - usually searching algorithms have log n if they are sorted (Binary Search)
-3. **(n)**
-    - Linear
+3. **(n)** - Linear
     - for loops, while loops through n items
-4. **O(n log(n))**
-    - Log linear
+4. **O(n log(n))** - Log linear
     - usually sorting operations
-5. **O(n^2)**
-    - Quadratic
+5. **O(n^2)** - Quadratic
     - every element in a collection needs to be compared to ever other element. Two nested loops
-6. **O(2^n)**
-    - Exponential
+6. **O(2^n)** - Exponential
     - recursive algorithms that solves a problem of size N
-8. **O(n!)** 
-    - Factorial
+8. **O(n!)** - Factorial
     - you are adding a loop for every element
 
 ## III. Data Structures
-### A.Array
+### 1.Array
 - Basic Functions
     1. pop *O(1)* 
     2. lookup *O(1)*
@@ -64,7 +57,7 @@
     - https://leetcode.com/problems/move-zeroes/description/
     - https://leetcode.com/problems/contains-duplicate/description/
     - https://leetcode.com/problems/rotate-array/description/
-### B. Hash Tables
+### 2. Hash Tables
 - hash maps / key value pair 
 - objects in js are basically hash tables
     - js also has maps and sets
@@ -78,7 +71,7 @@
     - there could be collision that would need resolution
     - has no concept of order
     - slow key iteration
-### C. Linked Lists
+### 3. Linked Lists
 - allows access to the elements via traversal instead of index
 - Basic Functions
     - prepend - *O(1)*
@@ -133,11 +126,12 @@
     - examples: 
         - push based services - SQS
         - message queues
-### F. binary trees
+### F. trees
 - a type of tree (parent-child relationship) which only has 2 children
     - examples: DOM, family trees, comment, abstract syntax tree
 - Types of Binary Trees
     1. perfect binary tree
+        - A perfect binary tree is a type of binary tree in which every internal node has exactly two child nodes and all the leaf nodes are at the same level.
         - level n of a binary tree has 2 ^ nodes
             - 0 has 2^0 =1
             - 1 has 2^1 = 2
@@ -149,7 +143,10 @@
             - the number of nodes = log (nodes) = log n
             - this means the number of decisions we would need to make at most is log n
     2. full binary tree
-    3. binary search tree
+        - A full Binary tree is a special type of binary tree in which every parent node/internal node has either two or no children. It is also known as a proper binary tree. 
+    3.  complete binary tree
+        - A complete binary tree is a binary tree in which all the levels are completely filled except possibly the lowest one, which is filled from the left. A complete binary tree is just like a full binary tree, but with two major differences. All the leaf elements must lean towards the left.
+    4. binary search tree
         - each node cannot have more thant 2 children
         - all right child are > root
         - all left child are < root
@@ -163,10 +160,28 @@
         - weakness
             - it has no O(1) operations
             - the operations are almost always O(log n) when balanced
-- Special BST for balancing:
-    1. AVL tree
-    2. Red Black tree
-8. **Graphs**
+        - Special BST for balancing:
+            1. AVL tree
+            2. Red Black tree
+    5. heap
+        -  a heap is a complete binary tree with the parent always being either always higher or lower than the children... hence there is the max heap or min heap.
+        - unlike a binary tree we do not have to rebalance a binary heap. it is always left to right insersion. (this means they can be easily implemented in arrays.)
+        - special types
+            1. priority queues
+                - from the top left then right
+                - strength:
+                    - find max and find min are *O(1)*
+                    - insertion is done in order ( there is a priority for insertion)
+                    - fast insert
+                    - great in finding hte max or minimum
+                - weakness
+                    - slow insert
+    6. trie
+        - prefix tree
+        - it is useful for autocompletion and suggesting things
+        - strengths:
+            - finding a word depends on the length of the word
+### G. Graphs**
 
 
 ## IV. Problem Solving
@@ -183,3 +198,4 @@
 
 ## V. Reference 1
 - https://www.bigocheatsheet.com/
+- https://visualgo.net/en/bst
