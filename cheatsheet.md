@@ -92,96 +92,96 @@
 - weakness
     - slow lookup
     - large memory size
-### D. Stacks and Queues
-1. Stacks
-    - last in first out (LIFO)
-    - Basic Functions
-        - pop *O(1)* 
-        - push *O(1)*
-        - peek *O(1)*
-        - lookup - *O(n)*
-    - strengths:
-        - fast operations 
-        - ordered
-    - weakness:
-        - single access
-        - slow lookup
-    - examples: 
-        - undo button
-        - call stack
-2. Queues
-    - First in first oput (FIFO)
-    - Basic Functions
-        - dequeue / pop *O(1)* 
-        - enqueue / push *O(1)*
-        - peek *O(1)*
-        - lookup - *O(n)*
-    - strengths:
-        - fast operations 
-        - ordered
-    - weakness:
-        - it is slow when implemented using arrays because we always work with the 0th index causing every insert to shift the whole array.
-        - single access
-        - slow lookup
-    - examples: 
-        - push based services - SQS
-        - message queues
-### F. trees
+### 4. Stacks and Queues
+#### a. Stacks
+- last in first out (LIFO)
+- Basic Functions
+    - pop *O(1)* 
+    - push *O(1)*
+    - peek *O(1)*
+    - lookup - *O(n)*
+- strengths:
+    - fast operations 
+    - ordered
+- weakness:
+    - single access
+    - slow lookup
+- examples: 
+    - undo button
+    - call stack
+#### b. Queues
+- First in first oput (FIFO)
+- Basic Functions
+    - dequeue / pop *O(1)* 
+    - enqueue / push *O(1)*
+    - peek *O(1)*
+    - lookup - *O(n)*
+- strengths:
+    - fast operations 
+    - ordered
+- weakness:
+    - it is slow when implemented using arrays because we always work with the 0th index causing every insert to shift the whole array.
+    - single access
+    - slow lookup
+- examples: 
+    - push based services - SQS
+    - message queues
+### 5. trees
 - a type of tree (parent-child relationship) which only has 2 children
     - examples: DOM, family trees, comment, abstract syntax tree
 - Types of Binary Trees
-    1. perfect binary tree
-        - A perfect binary tree is a type of binary tree in which every internal node has exactly two child nodes and all the leaf nodes are at the same level.
-        - level n of a binary tree has 2 ^ nodes
-            - 0 has 2^0 =1
-            - 1 has 2^1 = 2
-            - 2 4
-            - 3 8   
-        - the number of nodes double every depth
-        - the number of leaves = other nodes +1
-        - the total nodes = 2^h - 1
-            - the number of nodes = log (nodes) = log n
-            - this means the number of decisions we would need to make at most is log n
-    2. full binary tree
-        - A full Binary tree is a special type of binary tree in which every parent node/internal node has either two or no children. It is also known as a proper binary tree. 
-    3.  complete binary tree
-        - A complete binary tree is a binary tree in which all the levels are completely filled except possibly the lowest one, which is filled from the left. A complete binary tree is just like a full binary tree, but with two major differences. All the leaf elements must lean towards the left.
-    4. binary search tree
-        - each node cannot have more thant 2 children
-        - all right child are > root
-        - all left child are < root
-        - strengths:
-            - Better than O(n) for search
-                - binary search trees are great for searches
-                - bst have an O(log n) search speed
-                - unbalanced bst are searched in O(n)
-                - a balanced bst are searched in O(log n)
-            - the tree preserves relationships
+#### a. perfect binary tree
+- A perfect binary tree is a type of binary tree in which every internal node has exactly two child nodes and all the leaf nodes are at the same level.
+- level n of a binary tree has 2 ^ nodes
+    - 0 has 2^0 =1
+    - 1 has 2^1 = 2
+    - 2 4
+    - 3 8   
+- the number of nodes double every depth
+- the number of leaves = other nodes +1
+- the total nodes = 2^h - 1
+    - the number of nodes = log (nodes) = log n
+    - this means the number of decisions we would need to make at most is log n
+#### b. full binary tree
+- A full Binary tree is a special type of binary tree in which every parent node/internal node has either two or no children. It is also known as a proper binary tree. 
+#### c.  complete binary tree
+- A complete binary tree is a binary tree in which all the levels are completely filled except possibly the lowest one, which is filled from the left. A complete binary tree is just like a full binary tree, but with two major differences. All the leaf elements must lean towards the left.
+#### d. binary search tree
+- each node cannot have more thant 2 children
+- all right child are > root
+- all left child are < root
+- strengths:
+    - Better than O(n) for search
+        - binary search trees are great for searches
+        - bst have an O(log n) search speed
+        - unbalanced bst are searched in O(n)
+        - a balanced bst are searched in O(log n)
+    - the tree preserves relationships
+- weakness
+    - it has no O(1) operations
+    - the operations are almost always O(log n) when balanced
+- Special BST for balancing:
+    1. AVL tree
+    2. Red Black tree
+#### e. heap
+-  a heap is a complete binary tree with the parent always being either always higher or lower than the children... hence there is the max heap or min heap.
+- unlike a binary tree we do not have to rebalance a binary heap. it is always left to right insersion. (this means they can be easily implemented in arrays.)
+- special types
+    1. priority queues
+        - from the top left then right
+        - strength:
+            - find max and find min are *O(1)*
+            - insertion is done in order ( there is a priority for insertion)
+            - fast insert
+            - great in finding hte max or minimum
         - weakness
-            - it has no O(1) operations
-            - the operations are almost always O(log n) when balanced
-        - Special BST for balancing:
-            1. AVL tree
-            2. Red Black tree
-    5. heap
-        -  a heap is a complete binary tree with the parent always being either always higher or lower than the children... hence there is the max heap or min heap.
-        - unlike a binary tree we do not have to rebalance a binary heap. it is always left to right insersion. (this means they can be easily implemented in arrays.)
-        - special types
-            1. priority queues
-                - from the top left then right
-                - strength:
-                    - find max and find min are *O(1)*
-                    - insertion is done in order ( there is a priority for insertion)
-                    - fast insert
-                    - great in finding hte max or minimum
-                - weakness
-                    - slow insert
-    6. trie
-        - prefix tree
-        - it is useful for autocompletion and suggesting things
-        - strengths:
-            - finding a word depends on the length of the word
-### G. Graphs**
+            - slow insert
+#### f. trie
+- prefix tree
+- it is useful for autocompletion and suggesting things
+- strengths:
+    - finding a word depends on the length of the word
+### 6. Graphs
 
 
 ## IV. Problem Solving
