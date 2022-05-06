@@ -21,7 +21,7 @@
     - no loops
 2. **O(log N)** - Logarithmic
     - usually searching algorithms have log n if they are sorted (Binary Search)
-3. **(n)** - Linear
+3. **O(n)** - Linear
     - for loops, while loops through n items
 4. **O(n log(n))** - Log linear
     - usually sorting operations
@@ -126,7 +126,7 @@
 - examples: 
     - push based services - SQS
     - message queues
-### 5. trees
+### 5. Binary trees
 - a type of tree (parent-child relationship) which only has 2 children
     - examples: DOM, family trees, comment, abstract syntax tree
 - Types of Binary Trees
