@@ -52,6 +52,11 @@
 //         return currentNode;
 //     }
 // }
+() =>{
+    value;
+    next;
+}
+
 
 
 class LinkedList{

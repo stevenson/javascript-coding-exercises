@@ -182,6 +182,10 @@
 - strengths:
     - finding a word depends on the length of the word
 ### 6. Graphs
+- strength:
+    - good for modelling relationship (neo4j)
+- weakness
+    - it is slow and big and might be expensive to implement
 
 
 ## IV. Problem Solving
